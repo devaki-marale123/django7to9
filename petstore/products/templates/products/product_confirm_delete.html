@@ -1,0 +1,13 @@
+<!----for deleting products-->
+
+{% extends 'base.html'%} {% block content %}
+
+<form method="post">
+  {% csrf_token %}
+
+  <h1>Do You Want To Delete This Product???</h1>
+
+  <button type="submit">Confirm</button>
+</form>
+
+{% endblock %}

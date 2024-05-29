@@ -1,0 +1,17 @@
+{% extends 'base.html'%}
+
+{%block content%}
+<h1>Products</h1>
+
+<!-----iterating in queryset object_list which is given by ListView-->
+
+<div class="row row-cols-1 row-cols-md-4 g-4">
+  {%for product in object_list %}
+  
+  
+                {%include 'Product_card.html' with obj=product%}
+                
+{%endfor%}
+</div>
+
+{%endblock%}

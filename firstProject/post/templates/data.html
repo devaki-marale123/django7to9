@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/submit/" method="post">
+        {%csrf_token%}
+        <label for="">Enter Name:</label>
+        <input type="text" name="username" id="">
+        <label for="">Enter Phone No</label>
+        <input type="number" name="phoneno" id="">
+        <input type="submit" value ="submit">
+    </form>
+    
+    {%if username%}
+        <p>Value from form is {{username}}</p>
+        <p>Phone no {{phoneno}}</p>
+    {%endif%}    
+</body>
+</html>
